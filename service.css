@@ -1,0 +1,323 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;  
+    transition: background-color 0.3s,color 0.3s;
+    font-size: 18px;
+    color: white;
+    overflow-x: hidden;
+
+}
+header{
+    background-color: rgba(51, 51, 51, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 0 10px black;
+    backdrop-filter: blur(5px);
+    z-index:1000 ;
+}
+header .logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f4b41a;
+    text-shadow: 2px 2px 10px black;
+}
+nav ul{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+nav ul li{
+    margin: 0 15px;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+    padding: 5px 10px;
+}
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #f4b41a;
+   transform: scaleX(0);
+    transition:transform 0.3s;
+
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+}
+nav ul li a:hover{
+color: #f4b41a;
+}
+.menu-toggle{
+display: block;
+cursor: pointer;
+}
+.menu-toggle span{
+   
+    width: 25px;
+    height: 3px;
+    background-color: #f9f6f6;
+    margin-bottom: 5px;
+    position: relative;
+    transition:background-color 0.3s;
+
+}
+h1{
+    color: rgb(251, 248, 248);
+    font-size: 5.6rem;
+    
+}
+h6{
+    color: rgb(254, 250, 250);
+    font-style: oblique;
+   font-size: 3.2rem;
+    text-align: center;
+}
+@media(max-width:768px){
+    .menu-toggle span{
+        display:block ;
+        width: 25px;
+        height: 3px;
+        background-color: #f9f6f6;
+        margin-bottom: 5px;
+        position: relative;
+        transition:background-color 0.3s;
+    
+    }
+    
+    .menu-toggle span{
+        display:block ;
+        width: 25px;
+        height: 3px;
+        background-color: #f9f6f6;
+        margin-bottom: 5px;
+        position: relative;
+        transition:background-color 0.3s;
+    
+    }
+    header{
+        width: 450px;
+        height: 3rem;
+    }
+    body{
+        overflow-x: hidden;
+        background: linear-gradient(135deg,#121212 50%,#333 50%); 
+    }
+    .intro{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .title{
+        width: 50%;
+    }
+    .intro img{
+        margin-left: 0px;
+        margin-bottom: 20px;
+        width: 60%;
+    }
+    .intro-content{
+        max-width: 80%; 
+    }
+    .intro-content p{
+        max-width: 90%; 
+    }
+    .cta-buttons{
+        justify-content: center;
+    }
+    #mode-toggle{
+        display: block;
+        z-index: 1001;
+    }
+    nav.open ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+
+    }
+    nav ul li a{
+        color: black;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .product{
+        right: 20px;
+        display: flex;
+       flex-wrap: wrap;
+    }
+    .tution{
+        position: absolute;
+        
+        top: 20px;
+    }
+    .Travel{
+        position: relative;
+        top: 33vh;
+    }
+    .planning{
+        position: relative;
+        top: 33vh;
+    }
+    .line{
+        position: relative;
+        top: 13vh;
+    }
+    .website img{
+        height: 500px;
+        width: 3vw;
+        position: relative;
+        top: 130vh;
+        left: 35px;
+    }
+
+}
+body.light-mode h1{
+    background: white;
+    color: rgb(7, 7, 7);
+}
+body.light-mode header{
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(1, 17, 8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+body.light-mode header .logo{
+    color: #f4b41a;
+    text-shadow: 2px 2px 5px rgb(4, 5, 4);
+}
+body.light-mode header span{
+    width: 25px;
+    height: 3px;
+    background-color: #0c0c0c;
+    margin-bottom: 5px;
+    position: relative;
+    transition:background-color 0.3s;
+
+}
+body.light-mode nav ul li a{
+    color: black;
+}
+body.light-mode .intro-section{
+    background: linear-gradient(135deg,#fff 50%,#f2f2f2 50%);
+}
+.intro-section{
+    background: linear-gradient(135deg,#121212 50%,#333 50%); 
+    height: 100%;
+    width: 100vw;
+    padding-top: 60px;
+    transition: background 0.3s ;
+}
+.product{
+    
+    height: 10vw;
+    width: 10vw;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+}
+div.tution{
+    background-color: #f4b41a;
+    margin-left: 100px;
+    box-shadow: 3px 3px 10px #dfdbd4;
+}
+div.position{
+    margin-top: 200px;
+}
+div.Travel{
+    align-items: center;
+    background-color: #f4b41a;
+    box-shadow: 3px 3px 10px #dfdbd4;
+}
+div.planning {
+    background-color: #f4b41a;
+    box-shadow: 3px 3px 10px #dfdbd4;
+}
+div.planning img{
+    height: 434px;
+    width: 434px;
+   
+}
+div.Travel,
+div.tution,
+div.planning{
+    margin: 30px;
+}
+
+div.Travel:hover,div.tution:hover,div.planning:hover{
+    box-shadow: 5px 5px 15px #f4b41a,-5px -5px 15px #f4b41a;
+}
+div.Travel h3 ,
+div.tution h3,
+div.planning h3,
+.website h3{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div.line{
+    margin-top: 200px;
+    height: 0.5vw;
+    width: 100%;
+    color: rgba(255, 0, 0, 0.009);
+    background-color: #f4b31a5a;
+}
+.website h3{
+    margin: 21px;
+      background-color: #f4b41a;
+    box-shadow: 3px 3px 10px #dfdbd4;
+}
+.website img{
+    margin-top:5rem;
+    height: 100%;
+    width: 100%;
+   
+}
+.website img:hover{
+    filter: drop-shadow(5px 5px 15px #f4b41a);
+}
+.large{
+    height: 90px;
+    width: 1490px;
+}
+button{
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px black;
+    color: rgb(0, 0, 0);
+    background-color: #f4b31ab1;
+   height: 45px;
+   width: 190px;
+    margin-left: 250px;
+}
+
+
+
+
